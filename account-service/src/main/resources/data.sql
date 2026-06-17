@@ -1,4 +1,4 @@
-SET SCHEMA ba0352;
+SET search_path TO ba0352;
 
 -- Insert Organizations
 INSERT INTO ucs_orgtn (id_orgtn, name_orgtn) VALUES (1001, 'Freddie Mac Institutional');

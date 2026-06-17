@@ -122,6 +122,9 @@ public class UserCntrPrtyAcctServiceImpl implements UserCntrPrtyAcctService {
     @Transactional
     public UserCntrPrtyAcct saveAccount(UserCntrPrtyAcct account) {
         log.info("Saving user counterparty account: {}", account.getNameCntprtyAcct());
+        if (account.getUcsCntPrtyAcctRoleAssn() != null) {
+            account.getUcsCntPrtyAcctRoleAssn().forEach(assn -> assn.setUserCntrPrtyAcct(account));
+        }
         UserCntrPrtyAcct saved = repository.save(account);
         notificationClient.sendNotification(
                 "admin@rapidx.com",

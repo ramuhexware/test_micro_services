@@ -104,7 +104,7 @@ FROM (SELECT
             CONCAT (COALESCE (T1.NAME_ORGTN,
                 ''),
                 CONCAT (' | ',
-                    CONCAT (COALESCE (T2.ID_CNTRYPRTY_ACCT,
+                    CONCAT (COALESCE (CAST (T2.ID_CNTRYPRTY_ACCT AS VARCHAR(100)),
                         ''),
                         CONCAT (' | ',
                             CONCAT (COALESCE (ADDR.NAME_CITY,

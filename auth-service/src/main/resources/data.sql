@@ -6,14 +6,14 @@ INSERT INTO auth_roles (name) VALUES ('ROLE_ADMIN');
 INSERT INTO auth_users (username, password, email) VALUES (
     'admin',
     '$2a$10$8.Nf49e.aE/vP9n81uX.uexQYp2wT43Vb5zI14R1.yU6tS9fQkF4G',
-    'admin@rapidx.com'
+    'admin@test_microservices.com'
 );
 
 -- Insert default User user (password: user123)
 INSERT INTO auth_users (username, password, email) VALUES (
     'user',
     '$2a$10$Uu2n25kS91oM1Lcr4k3M5.aD88mYgXzH4u8P/r1i9Z/b4sO0x6F4G',
-    'user@rapidx.com'
+    'user@test_microservices.com'
 );
 
 -- Assign Roles
